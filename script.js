@@ -14,6 +14,15 @@ const playGame = (choice) => {
     alert("How unfortunate, come back when you feel up to the task")
   }
 }
+choiceOne()
+
+choiceTwo()
+
+choiceThree()
+
+choiceFour()
+
+numberChoice ()
 function choiceOne() {
     let firstChoice = prompt("You enter a small mining city in Yalora, a kingdom graced upon many a kind. The virtuous and proud, HIGH ELVES; the cunning and avant-garde, TIEFLINGS; and the innovative and reclusive DWARVES. Forgive me young adventurer, for my eyes are old, what race do you hail from?")
 
@@ -38,8 +47,9 @@ function choiceOne() {
 
         } else if (secondChoice === "NO") {
             alert("Scared of a few orcs aint ya? END")
-            playGame()
-
+            prompt("play again?")
+            startGame()
+            
         } else if (secondChoice === "CHEST?") {
             alert("Mind ya business and bring me that chest!")
 
@@ -69,59 +79,49 @@ function choiceOne() {
         let fourthChoice = prompt("You made your way into the mines and begin searching for the chest. You come across three different paths in the cave. The LEFT is dark and quiet with the occasional scream. The MIDDLE had glitter and classical music playing. The RIGHT has heavy death metal but smelled like pumpkin spice. Which way do you go?")
         if (fourthChoice === "LEFT") {
             alert("You chose left so you walked down the dark route and could hear the screams get louder and louder. As you approach you come across a French Bulldog sitting there perplexed. Before you could do anything the french bulldog transformed into a giant serpent and ate you. END")
-            startGame()
+            numberChoice()
 
         } else if (fourthChoice === "MIDDLE") {
             alert("You walk down the corridor and get stuck in an endless loop of RuPaul's drag race. Yay? END")
-            startGame()
+            numberChoice()
 
         } else if(fourthChoice === "RIGHT") {
             alert("You walk down this path and to your dissapointment there were no pumpkin spice lattes but a chest END")
+            numberChoice()
 
         } else {
             alert("decision fatigue?")
+            choiceFour()
         }
 
-        {prompt("play again?")
-        startGame()
+       
     }
     
-   /*
-   I couldn't figure out how to code this into my code without breaking my code up above. Below is my attempt. I received a bunch of errors when trying to incorporate this but i would like to think im close to the answer. I figured this is better than submitting nothing for the other two requirements and it shows I attempted. Help?
    
-   let numberChoice = prompt("How are you feeling about this game on a scale of 1-5? 5 being the best ${ } ");{
-        case '1':
-            alert("That's unfortunate, maybe you should choose a different career path")
-            break;
-    
-        case '2': 
-            alert("I could say I feel the same way about you");
-            break;
+    let numberChoice = prompt("How are you feeling about this game on a scale of 1-5? 5 being the best ${ } ");
 
-        case '3':
-            alert("Not surprised. You've always been average");
-            break;
-
-        case '4':
-            alert("Why didn't you choose 5 instead?");
-            break;
-
-        case '5':
-            alert("Youre having a little too much fun.");
-            break;
-        }*/
-    }
-    
+    switch (numberChoice) {
+      case '1':
+        alert("That's unfortunate, maybe you should choose a different career path")
+        break;
+  
+      case '2':
+        alert("I could say I feel the same way about you");
+        break;
+  
+      case '3':
+        alert("Not surprised. You've always been average");
+        break;
+  
+      case '4':
+        alert("Why didn't you choose 5 instead?");
+        break;
+  
+      case '5':
+        alert("Youre having a little too much fun.");
+        break;
         
-
-    choiceOne()
-
-    choiceTwo()
-
-    choiceThree()
-
-    choiceFour()
-
-    /*numberChoice ()*/
-
-startGame()
+      }
+     
+    startGame()
+    
